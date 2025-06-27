@@ -1,0 +1,27 @@
+.card{
+    border: 1px solid #f07f7f;
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #e23636;
+    margin: auto;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    }
+.name{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.bio{
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+}
