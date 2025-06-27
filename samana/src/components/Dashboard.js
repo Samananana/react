@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// ...existing code...
 function Dashboard() {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
@@ -30,6 +29,9 @@ function Dashboard() {
         setSelectAll(newValue);
         setTasks(tasks.map(task => ({ ...task, completed: newValue })));
     };
+    const deleteSelectedTasks = () => {
+        setTasks(tasks.filter(task => !task.completed));
+    };
 
     return (
         <div>
@@ -45,6 +47,17 @@ function Dashboard() {
                     style={styles.input}
                 />
                 <button onClick={handleAddTask} style={styles.addButton}>Add Task</button>
+            {/* Add Delete Selected button */}
+            <button
+                onClick={deleteSelectedTasks}
+                style={{
+                    ...styles.addButton,
+                    backgroundColor: "#dc3545",
+                    marginLeft: "10px"
+                }}
+            >
+                Delete Selected
+            </button>
             </div>
             {/* Select All Checkbox */}
             {tasks.length > 0 && (
